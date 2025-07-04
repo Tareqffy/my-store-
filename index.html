@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+</head>
+<body>
+  <h2>تسجيل الدخول</h2>
+  <form onsubmit="checkLogin(); return false;">
+    <input type="password" id="password" placeholder="كلمة السر">
+    <button type="submit">تسجيل الدخول</button>
+  </form>
+  <button onclick="loginAsUser()">الدخول مباشرة كمستخدم</button>
+
+  <script>
+    function checkLogin() {
+      const pass = document.getElementById('password').value;
+      if (pass === '201088') {
+        window.location.href = 'admin.html';
+      } else {
+        alert('كلمة السر غير صحيحة');
+      }
+    }
+    function loginAsUser() {
+      window.location.href = 'user.html';
+    }
+  </script>
+</body>
+</html>
